@@ -20,7 +20,7 @@ function requireAuth(req, res, next)
     next();
 }
 
-/* GET Route for the Book List page - READ Operation */
+/* GET Route for the Survey List page - READ Operation */
 router.get('/', surveyController.displaySurveyList);
 
 /* GET Route for displaying the Add page - CREATE Operation */
