@@ -29,7 +29,7 @@ module.exports.displayLoginPage = (req, res, next) => {
     }
     else
     {
-        return res.redirect('/');
+        return res.redirect('/login');
     }
 }
 
@@ -70,7 +70,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
     }
     else
     {
-        return res.redirect('/');
+        return res.redirect('/survey-answer');
     }
 }
 
