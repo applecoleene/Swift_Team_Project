@@ -1,0 +1,43 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+
+<!--Main content-->
+<main class="container">
+  <div class="row">
+      <div class="offset-md-1 col-md-10">
+          <div class="px-4 py-4 my-4 text-center">
+              <h1 class="display-5 fw-bold"><%= title %></h1>
+          </div>
+
+          <table class="table table-bordered table-striped table-hover" id="tableSurvey">
+              <!-- Header Row-->
+              <tr>
+                  <th class="text-center">Name</th>
+                  <th class="text-center">Gender</th>
+                  <th class="text-center">Program</th>
+                  <th class="text-center">Preffered class delivery</th>
+                  <th class="text-center">Online test is easier</th>
+              </tr>
+
+              <!-- Repeatable Template Row -->
+
+              <% for(let i = 0; i < SurveyList.length; i++) { %>
+              <tr>
+                <td class="text-center"><%= SurveyList[i].name %></td>
+                <td class="text-center"><%= SurveyList[i].gender %></td>
+                <td class="text-center"><%= SurveyList[i].program %></td>
+                <td class="text-center"><%= SurveyList[i].study_meth %></td>
+                <td class="text-center"><%= SurveyList[i].test_diff %></td>
+              </tr>
+              <% } %>
+          </table>
+      </div>
+  </div>
+</main>
+
+
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
