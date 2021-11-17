@@ -7,9 +7,11 @@
     <div class="row">
         <div class="offset-md-1 col-md-10">
             <h1><%= title %></h1>
+            <% if(typeof displayName == 'string' && displayName) { %>
             <a href="/survey-list/add" class="btn btn-primary" role="button">
             <i class="fas fa-plus-circle"></i> Add a Survey</a>
             <br><br>
+            <% } %>
             <table class="table table-bordered table-striped table-hover">
                 <!-- Header Row-->
                 <tr>
@@ -18,8 +20,10 @@
                     <th class="text-center">Program</th>
                     <th class="text-center">Study Method</th>
                     <th class="text-center">Online test is easy</th>
+                    <% if(typeof displayName == 'string' && displayName) { %>
                     <th class="text-center">Action</th>
                     <th class="text-center">Action</th>
+                    <% } %>
                 </tr>
 
                 <!-- Repeatable Template Row -->
@@ -31,6 +35,7 @@
                         <td class="text-center"><%= SurveyList[count].program %></td>
                         <td class="text-center"><%= SurveyList[count].study_meth %></td>
                         <td class="text-center"><%= SurveyList[count].test_diff %></td>
+                        <% if(typeof displayName == 'string' && displayName) { %>
                         <td class="text-center">
                             <a href="/survey-list/edit/<%= SurveyList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i> Edit</a>
@@ -39,6 +44,7 @@
                             <a href="/survey-list/delete/<%= SurveyList[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
+                        <% } %>
                     </tr>
                 <% } %>
             </table>
