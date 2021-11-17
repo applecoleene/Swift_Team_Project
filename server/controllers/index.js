@@ -13,7 +13,7 @@ module.exports.displayHomePage = (req, res, next) => {
 }
 
 module.exports.displaySurveyPage = (req, res, next) => {
-    res.render('survey', { title: 'Survey Table'});
+    res.render('survey-answer', { title: 'Survey Table'});
 }
 //showing the login page
 module.exports.displayLoginPage = (req, res, next) => {
