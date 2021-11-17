@@ -1,5 +1,12 @@
 let express = require('express');
 let router = express.Router();
+let mongoose = require('mongoose');
+let passport = require('passport');
+
+//user model instance
+let userModel = require('../models/user');
+let User = userModel.User;
+
 
 module.exports.displayHomePage = (req, res, next) => {
     res.render('index', {title: 'Home'});
