@@ -10,7 +10,7 @@ router.get('/', indexController.displayHomePage);
 router.get('/home', indexController.displayHomePage);
 
 /* GET survey page. */
-router.get('/survey-answer', indexController.displaySurveyPage);
+router.get('/survey', indexController.displaySurveyPage);
 
 //displaying login Page
 router.get('/login', indexController.displayLoginPage);
