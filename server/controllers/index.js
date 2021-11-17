@@ -51,7 +51,7 @@ module.exports.processLoginPage = (req, res, next) => {
             {
                 return next(err);
             }
-            return res.redirect('/survey-answer');
+            return res.redirect('/survey-list');
         });
     })(req, res, next);
 }
@@ -70,7 +70,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
     }
     else
     {
-        return res.redirect('/survey-answer');
+        return res.redirect('/survey-list');
     }
 }
 
@@ -106,7 +106,7 @@ module.exports.processRegisterPage = (req, res, next) => {
         {
             //redirect and authenticate user if there is no error
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/survey-answer')
+                res.redirect('/survey-list')
             });
         }
     });
