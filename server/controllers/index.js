@@ -9,12 +9,9 @@ let User = userModel.User;
 
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home'});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displaySurveyPage = (req, res, next) => {
-    res.render('survey', { title: 'Survey Table'});
-}
 //showing the login page
 module.exports.displayLoginPage = (req, res, next) => {
     // check if the user is already logged in

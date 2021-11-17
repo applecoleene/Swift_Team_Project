@@ -9,9 +9,6 @@ router.get('/', indexController.displayHomePage);
 /* GET home page. */
 router.get('/home', indexController.displayHomePage);
 
-/* GET survey page. */
-router.get('/survey', indexController.displaySurveyPage);
-
 //displaying login Page
 router.get('/login', indexController.displayLoginPage);
 
