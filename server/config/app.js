@@ -45,9 +45,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-app.use('/', indexRouter);
-//app.use('/users', usersRouter);
-app.use('/survey-list', surveyRouter);
 //setup express session
 app.use(session({
   secret: "SomeSecret",
@@ -72,6 +69,10 @@ passport.use(User.createStrategy());
 //encrypt and decrypt user information
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+//app.use('/', indexRouter);
+//app.use('/users', usersRouter);
+//app.use('/survey-list', surveyRouter);
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
